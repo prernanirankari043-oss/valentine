@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  </title>For My Love Anand 💞 </title>
+
+  </style>
+  body {
+        margin : 0;
+        padding : 0;
+  background : linear-gradient(135deg,#ffddde1,#ee9ca7);
+  overflow : hidden ;
+  font-family : 'Segoe UI' , sans-serif;
+  text-align: centre ;
+  color : white ;
+  }
+  h1 {
+  margin-top : 120px:
+  font--size : 42px:
+  animation : fadeIn 2s ease-in-out:
+  }
+  button {
+  padding :12px 28px;
+  fot-size :18px;
+  border : none ;
+  border-radius: 30px;
+  cursor: pointer;
+  margin : 12px;
+  transition :0.4s;
+  }
+
+  .Yes {
+  background : white ;
+  color: #ee9ca7;
+  }
+  .Yes:hover {
+  transform: scale(1.1) ;
+  }
+
+  .No {
+  background : rgba(255,255,255,0.4);
+  color : white ;
+  }
+
+  .hidden {
+  display:none;
+  }
+
+  .float {
+  position: absolute ;
+  font-size : 22px;
+  animation : floatUp 6s linear infinite ;
+  opacity : 0.8;
+  }
+
+  @keyframes floatUp {
+     from {
+         transform: translateY(100vh);
+         opacity : 1;
+  }
+  to {
+      transform : translateY(-10vh);
+      opacity : 0;
+  }
+
+}
+
+  .message {
+  font-size : 26px ;
+  margin-top : 40px;
+  animation : fadeIn 1.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+  from { opacity : 0; transform : translateY(10px); }
+  to { opacity : 1;,transform : translateY(0); }
+
+  }
+   </style>
+</head>
+</body>
+
+  <div id="proposal">
+    </h1>Anand...💝<br>Will You Be My Valentine ?</h1>
+    <button class="Yes" onclick="accepted()">Yes 😛</button>
+    <button class="no" onclick="rejected()">No 😑</button>
+  </div>
+
+<div id="surprise" class="hidden">
+  </h1>That made me really happy 😊</h1>
+  <div class="message" id="text"></div>
+</div>
+
+  </script>
+  const messages = [
+  "I just want to let you know that you mean my world to me 😭",
+  "Thank you for being you , changing yourself just for me is something that really melted me 🫠",
+  "I want to grow old with you and also be the mother of OUR children 😎 the cool mom uk ",
+  " You're my first LOVE and I Love sooo much that i can't live without you ",
+  "I will stand by your side in your highs and lows , especially in your lows ",
+  "please ik mai gussa karti and ego hai but pls thoda jhel lena , i hate fighting with u but wont admit .",
+  "at last my god bless us for us to be together forever and pls kitni bhi fight ho ya life busy ho , pls giving up shouldn't be the solution ",
+  "I love you My Love but abse i will call u chikne 😉",
+  "Happy Valentine , My Love....💞"
+
+  ];
+
+let index = 0;
+
+  function accepted() {
+  document.getElementByID("proposal").classList.add("hidden");
+  document.getElementByID("surprise").classList.remove("hidden");
+
+  showMessages();
+  createMagic();
+
+  }
+
+
+  function rejected() {
+  alert("Hmm Think again ....");
+
+  }
+
+
+  function showMessages() {
+  const text = document.getElementById("text");
+
+  setInterval(()=> {
+
+  text.innerHTML = messages[index];
+  index = (index + 1) % messages.length;
+  }, 2200):
+
+  }
+
+  function createMagic() {
+  const symbols = ["💞","😘","😛"];
+
+
+  setInterval(() => {
+  const item = document.createElement("div");
+  items.classList.add("float");
+  item.innerHTML = symbols[Math.floor(Math.random()* symbols.length)];
+
+  item.style.left = Matg.random() * 100 + "vw";
+  item.style.fontSize = (Math.random() * 20 + 20 ) + "px";
+
+
+  document.body.appendChild(item);
+
+  setTimeout(() => {
+
+item.remove();
+  } , 6000);
+  },250);
+  }
+</script>
+</body>
+</html>
